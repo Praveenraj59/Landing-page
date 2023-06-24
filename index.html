@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Left Panel Example</title>
+    <link rel="stylesheet" href="style.css">
+  <script>
+    function showContent(contentId) {
+      var contentItems = document.getElementsByClassName("content-item");
+      for (var i = 0; i < contentItems.length; i++) {
+        contentItems[i].style.display = "none";
+      }
+
+      var content = document.getElementById(contentId);
+      content.style.display = "block";
+    }
+
+    function submitForm() {
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+
+      var table = document.getElementById("infoTable");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      cell1.innerHTML = firstName;
+      cell2.innerHTML = lastName;
+      cell3.innerHTML = email;
+    }
+  </script>
+</head>
+<body>
+  <div id="left-panel">
+    <div class="panel-item" onclick="showContent('home')">Home</div>
+    <div class="panel-item" onclick="showContent('contact')">Contact</div>
+    <div class="panel-item" onclick="showContent('information')">Information</div>
+    <div class="panel-item" onclick="showContent('guide')">Guide</div>
+  </div>
+  <div id="content">
+    <div id="home" class="content-item">
+      <h2>Welcome to the Home Page</h2>
+      <p>This is a general description of the website.</p>
+    </div>
+    <div id="contact" class="content-item">
+      <h2>Contact Page</h2>
+      <form onsubmit="event.preventDefault(); submitForm();">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required><br><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div id="information" class="content-item">
+      <h2>Information Page</h2>
+      <table id="infoTable">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+      </table>
+    </div>
+    <div id="guide" class="content-item">
+      <h2>Guide Page</h2>
+      <p>This is a guide on how to use the contact form and view the submitted information.</p>
+    </div>
+  </div>
+</body>
+</html>

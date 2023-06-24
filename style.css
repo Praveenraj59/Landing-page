@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #fff);
+    background-image: url('vivid-blurred-colorful-background_58702-2655.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+  }
+  h2 {
+    text-align: center;
+  }
+  #left-panel {
+    width: 20%;
+    height: 100%;
+    background-color: #ffffffc6;
+    color: #000;display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+
+  }
+  
+  .panel-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .panel-item:hover {
+    background-color: #87CEEB;
+  }
+  
+  #content {
+    width: 80%;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+
+  }
+  
+  .content-item {
+    display: none;
+    
+  }
+  
+  .content-item h2 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  .content-item p {
+    color: #666;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Styling for Contact Page */
+  form {
+    max-width: 300px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 150%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #333;
+  }
+  
+  /* Styling for Guide Page */
+  .guide-content {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: center;
+    border-bottom: 1px solid #1c1c1c;
+  }
